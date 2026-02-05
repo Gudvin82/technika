@@ -22,3 +22,27 @@ body {
   --safe-top: env(safe-area-inset-top);
   --safe-bottom: env(safe-area-inset-bottom);
 }
+
+/* Дополнительно: уменьшаем шанс pull-to-dismiss */
+body {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+}
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Дополнительно: уменьшаем шанс pull-to-dismiss */
+body {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+}
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
