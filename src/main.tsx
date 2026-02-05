@@ -11,7 +11,6 @@ if (tg) {
     tg.expand()
     tg.disableVerticalSwipes?.()
     tg.setSwipeBehavior?.({ allow_vertical_swipe: false })
-    tg.requestFullscreen?.()
   } catch (e) {}
 }
 
