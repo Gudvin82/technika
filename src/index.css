@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Telegram Mini App: меньше дерганий при свайпах */
+/* Telegram-friendly: уменьшаем дергание при свайпах, но НЕ ломаем layout */
 html, body {
   height: 100%;
   width: 100%;
-  overscroll-behavior-y: none;
-  overscroll-behavior-x: none;
+  overscroll-behavior: none;
 }
 
 body {
@@ -17,32 +16,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Safe area helpers (если захочешь использовать в классах) */
+/* Safe area helpers */
 :root {
   --safe-top: env(safe-area-inset-top);
   --safe-bottom: env(safe-area-inset-bottom);
-}
-
-/* Дополнительно: уменьшаем шанс pull-to-dismiss */
-body {
-  overflow: hidden;
-  position: fixed;
-  inset: 0;
-}
-#root {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-/* Дополнительно: уменьшаем шанс pull-to-dismiss */
-body {
-  overflow: hidden;
-  position: fixed;
-  inset: 0;
-}
-#root {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
 }
