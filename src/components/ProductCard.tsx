@@ -49,7 +49,7 @@ export function ProductCard({ product, onPress }: ProductCardProps) {
   const getBadgeIcon = (badge: string) => {
     switch (badge) {
       case 'hit': return <Flame size={10} />;
-      case 'sale': return <span className="text-[10px]">%</span>;
+      case 'sale': return <span className="text-[10px] whitespace-nowrap truncate">%</span>;
       case 'new': return <Star size={10} />;
       case 'fastDelivery': return <Zap size={10} />;
       default: return null;
@@ -227,7 +227,7 @@ export function ProductCard({ product, onPress }: ProductCardProps) {
         </h3>
 
         {/* Short specs */}
-        <div className="flex flex-wrap gap-1 mb-3">
+        <div className="flex gap-1 mb-3 h-6 overflow-hidden">
           {product.shortSpecs.slice(0, 3).map((spec, i) => (
             <span
               key={i}
